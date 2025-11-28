@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: t.contact.emailInfo,
-      value: "info@aeonix.tech",
-      href: "mailto:info@aeonix.tech",
+      value: t.contact.emailValue,
+      href: `mailto:${t.contact.emailValue}`,
     },
     {
       icon: Phone,

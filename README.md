@@ -217,7 +217,7 @@ export const translations: Record<Language, Translations> = {
 
 **Aeonix Technology Limited**
 
-- 📧 Email: info@aeonix.tech
+- 📧 Email: sales@info.dong-win.com
 - 📱 Phone: +852 1234 5678
 - 🌐 Website: https://aeonix-gpu-website.pages.dev
 

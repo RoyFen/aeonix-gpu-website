@@ -109,6 +109,7 @@ export interface Translations {
     errorMessage: string;
     infoTitle: string;
     emailInfo: string;
+    emailValue: string;
     phoneInfo: string;
     addressInfo: string;
     hoursInfo: string;
@@ -233,6 +234,7 @@ export const translations: Record<Language, Translations> = {
       errorMessage: "送出失敗,請稍後再試或直接聯絡我們。",
       infoTitle: "聯絡資訊",
       emailInfo: "電子郵件",
+      emailValue: "sales@info.dong-win.com",
       phoneInfo: "聯絡電話",
       addressInfo: "地址",
       hoursInfo: "營業時間",
@@ -355,6 +357,7 @@ export const translations: Record<Language, Translations> = {
       errorMessage: "Failed to send. Please try again or contact us directly.",
       infoTitle: "Contact Information",
       emailInfo: "Email",
+      emailValue: "sales@info.dong-win.com",
       phoneInfo: "Phone",
       addressInfo: "Address",
       hoursInfo: "Business Hours",
