@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -45,15 +45,9 @@ export default function Contact() {
       href: `mailto:${t.contact.emailValue}`,
     },
     {
-      icon: Phone,
-      label: t.contact.phoneInfo,
-      value: "+852 1234 5678",
-      href: "tel:+85212345678",
-    },
-    {
       icon: MapPin,
       label: t.contact.addressInfo,
-      value: "Hong Kong",
+      value: t.contact.addressValue,
       href: null,
     },
     {

@@ -110,8 +110,8 @@ export interface Translations {
     infoTitle: string;
     emailInfo: string;
     emailValue: string;
-    phoneInfo: string;
     addressInfo: string;
+    addressValue: string;
     hoursInfo: string;
     hoursValue: string;
   };
@@ -235,8 +235,8 @@ export const translations: Record<Language, Translations> = {
       infoTitle: "聯絡資訊",
       emailInfo: "電子郵件",
       emailValue: "sales@info.dong-win.com",
-      phoneInfo: "聯絡電話",
       addressInfo: "地址",
+      addressValue: "FLAT/RM709, 7/F, FU HANG INDUSTRIAL BUILDING NO.1 HOK YUEN STREET EAST HUNGHOM HK",
       hoursInfo: "營業時間",
       hoursValue: "週一至週五 09:00 - 18:00",
     },
@@ -358,8 +358,8 @@ export const translations: Record<Language, Translations> = {
       infoTitle: "Contact Information",
       emailInfo: "Email",
       emailValue: "sales@info.dong-win.com",
-      phoneInfo: "Phone",
       addressInfo: "Address",
+      addressValue: "FLAT/RM709, 7/F, FU HANG INDUSTRIAL BUILDING NO.1 HOK YUEN STREET EAST HUNGHOM HK",
       hoursInfo: "Business Hours",
       hoursValue: "Mon - Fri 09:00 - 18:00",
     },
