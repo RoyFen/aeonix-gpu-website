@@ -122,6 +122,44 @@ export interface Translations {
     followUs: string;
     copyright: string;
   };
+  leadForm: {
+    title: string;
+    subtitle: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    productLabel: string;
+    productPlaceholder: string;
+    productOptions: {
+      rtx4090: string;
+      rtx4080: string;
+      rtx4070ti: string;
+      rx7900xtx: string;
+      other: string;
+    };
+    contactLabel: string;
+    contactPlaceholder: string;
+    quantityLabel: string;
+    quantityPlaceholder: string;
+    purposeLabel: string;
+    purposePlaceholder: string;
+    purposeOptions: {
+      build: string;
+      upgrade: string;
+      workstation: string;
+      other: string;
+    };
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitButton: string;
+    submitting: string;
+    successTitle: string;
+    successMessage: string;
+    errorTitle: string;
+    errorMessage: string;
+    closeButton: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -247,6 +285,44 @@ export const translations: Record<Language, Translations> = {
       followUs: "追蹤我們",
       copyright: "© 2024 Aeonix Technology Limited. 版權所有。",
     },
+    leadForm: {
+      title: "顯示卡詢價",
+      subtitle: "填寫以下表單,我們將在 24 小時內回覆您",
+      emailLabel: "電子郵件",
+      emailPlaceholder: "your.email@example.com",
+      nameLabel: "姓名",
+      namePlaceholder: "您的姓名",
+      productLabel: "產品選擇",
+      productPlaceholder: "選擇顯示卡型號",
+      productOptions: {
+        rtx4090: "NVIDIA RTX 4090",
+        rtx4080: "NVIDIA RTX 4080",
+        rtx4070ti: "NVIDIA RTX 4070 Ti",
+        rx7900xtx: "AMD RX 7900 XTX",
+        other: "其他 (請在備註中說明)",
+      },
+      contactLabel: "聯絡方式",
+      contactPlaceholder: "Line ID / WhatsApp / 電話",
+      quantityLabel: "數量",
+      quantityPlaceholder: "需要幾張顯示卡?",
+      purposeLabel: "用途",
+      purposePlaceholder: "選擇用途",
+      purposeOptions: {
+        build: "組裝新電腦",
+        upgrade: "升級現有電腦",
+        workstation: "工作站 / 伺服器",
+        other: "其他",
+      },
+      messageLabel: "備註",
+      messagePlaceholder: "其他需求或問題?",
+      submitButton: "提交詢價",
+      submitting: "提交中...",
+      successTitle: "詢價已提交!",
+      successMessage: "感謝您的詢價,我們將在 24 小時內與您聯絡。",
+      errorTitle: "提交失敗",
+      errorMessage: "請重試或直接透過 Email 聯絡我們。",
+      closeButton: "關閉",
+    },
   },
   en: {
     nav: {
@@ -369,6 +445,44 @@ export const translations: Record<Language, Translations> = {
       quickLinks: "Quick Links",
       followUs: "Follow Us",
       copyright: "© 2024 Aeonix Technology Limited. All rights reserved.",
+    },
+    leadForm: {
+      title: "GPU Inquiry",
+      subtitle: "Fill out the form below and we'll get back to you within 24 hours",
+      emailLabel: "Email",
+      emailPlaceholder: "your.email@example.com",
+      nameLabel: "Name",
+      namePlaceholder: "Your name",
+      productLabel: "Product Selection",
+      productPlaceholder: "Select GPU model",
+      productOptions: {
+        rtx4090: "NVIDIA RTX 4090",
+        rtx4080: "NVIDIA RTX 4080",
+        rtx4070ti: "NVIDIA RTX 4070 Ti",
+        rx7900xtx: "AMD RX 7900 XTX",
+        other: "Other (please specify in message)",
+      },
+      contactLabel: "Contact Method",
+      contactPlaceholder: "Line ID / WhatsApp / Phone",
+      quantityLabel: "Quantity",
+      quantityPlaceholder: "How many GPUs do you need?",
+      purposeLabel: "Purpose",
+      purposePlaceholder: "Select purpose",
+      purposeOptions: {
+        build: "Building new PC",
+        upgrade: "Upgrading existing PC",
+        workstation: "Workstation / Server",
+        other: "Other",
+      },
+      messageLabel: "Additional Notes",
+      messagePlaceholder: "Any specific requirements or questions?",
+      submitButton: "Submit Inquiry",
+      submitting: "Submitting...",
+      successTitle: "Inquiry Submitted!",
+      successMessage: "Thank you for your inquiry. We will contact you within 24 hours.",
+      errorTitle: "Submission Failed",
+      errorMessage: "Please try again or contact us directly via email.",
+      closeButton: "Close",
     },
   },
 };

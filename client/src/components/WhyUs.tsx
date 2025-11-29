@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Clock, Award, TrendingUp, Users, Headphones } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LeadForm from "@/components/LeadForm";
 
 export default function WhyUs() {
   const { t } = useLanguage();
+  const [formOpen, setFormOpen] = useState(false);
 
   const advantages = [
     {
@@ -93,10 +96,7 @@ export default function WhyUs() {
               {t.whyUs.ctaSubtitle}
             </p>
             <button
-              onClick={() => {
-                const element = document.getElementById("contact");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={() => setFormOpen(true)}
               className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
               {t.whyUs.ctaButton}
@@ -104,6 +104,9 @@ export default function WhyUs() {
           </div>
         </div>
       </div>
+
+      {/* Lead Form Dialog */}
+      <LeadForm open={formOpen} onOpenChange={setFormOpen} />
     </section>
   );
 }

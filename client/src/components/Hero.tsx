@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LeadForm from "@/components/LeadForm";
 
 export default function Hero() {
   const { t } = useLanguage();
+  const [formOpen, setFormOpen] = useState(false);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const openForm = () => {
+    setFormOpen(true);
   };
 
   return (
@@ -57,7 +64,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              onClick={scrollToContact}
+              onClick={openForm}
               className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity group"
             >
               {t.hero.consultBtn}
@@ -93,6 +100,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Lead Form Dialog */}
+      <LeadForm open={formOpen} onOpenChange={setFormOpen} />
     </section>
   );
 }
