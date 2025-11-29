@@ -46,7 +46,7 @@ export default function LeadForm({ open, onOpenChange }: LeadFormProps) {
     try {
       // Send form data to n8n webhook
       const response = await fetch(
-        "https://dong-win.app.n8n.cloud/webhook/aeonix-gpu-inquiry",
+        "https://dong-win.app.n8n.cloud/webhook-test/aeonix-gpu-inquiry",
         {
           method: "POST",
           headers: {
