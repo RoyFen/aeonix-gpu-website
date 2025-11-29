@@ -60,7 +60,19 @@ export default function LeadForm({ open, onOpenChange }: LeadFormProps) {
         throw new Error("Failed to submit form");
       }
 
-      const result = await response.json();
+      // Try to parse JSON response, but handle empty responses gracefully
+      let result = { message: t.leadForm.successMessage };
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        try {
+          const text = await response.text();
+          if (text) {
+            result = JSON.parse(text);
+          }
+        } catch (e) {
+          console.warn("Failed to parse JSON response, using default message");
+        }
+      }
 
       toast.success(t.leadForm.successTitle, {
         description: result.message || t.leadForm.successMessage,
