@@ -44,26 +44,26 @@ export default function LeadForm({ open, onOpenChange }: LeadFormProps) {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send form data to n8n webhook
+      const response = await fetch(
+        "https://dong-win.app.n8n.cloud/webhook/aeonix-gpu-inquiry",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-      // Send email to sales@info.dong-win.com
-      const emailBody = `
-新的顯示卡詢價表單提交
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
 
-姓名: ${formData.name}
-Email: ${formData.email}
-聯絡方式: ${formData.contact}
-產品: ${formData.product}
-數量: ${formData.quantity}
-用途: ${formData.purpose}
-備註: ${formData.message}
-      `;
-
-      console.log("Form submitted:", emailBody);
+      const result = await response.json();
 
       toast.success(t.leadForm.successTitle, {
-        description: t.leadForm.successMessage,
+        description: result.message || t.leadForm.successMessage,
       });
 
       // Reset form
@@ -82,6 +82,7 @@ Email: ${formData.email}
         onOpenChange(false);
       }, 2000);
     } catch (error) {
+      console.error("Form submission error:", error);
       toast.error(t.leadForm.errorTitle, {
         description: t.leadForm.errorMessage,
       });
