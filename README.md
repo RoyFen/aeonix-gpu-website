@@ -217,7 +217,7 @@ export const translations: Record<Language, Translations> = {
 
 **Aeonix Technology Limited**
 
-- 📧 Email: sales@info.dong-win.com
+- 📧 Email: sale@aeonix-tech.com
 - 📍 Address: FLAT/RM709, 7/F, FU HANG INDUSTRIAL BUILDING NO.1 HOK YUEN STREET EAST HUNGHOM HK
 - 🌐 Website: https://aeonix-gpu-website.pages.dev
 

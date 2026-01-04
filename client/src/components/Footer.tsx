@@ -1,4 +1,3 @@
-import { Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -18,14 +17,10 @@ export default function Footer() {
     { id: "contact", label: t.nav.contact },
   ];
 
-  const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/a.cadr/", label: "Instagram" },
-  ];
-
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Brand & About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -37,13 +32,13 @@ export default function Footer() {
                 <span className="text-xs text-muted-foreground leading-none">Technology</span>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
               {t.footer.aboutText}
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:text-right">
             <h3 className="text-lg font-bold mb-4 text-foreground">{t.footer.quickLinks}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -57,28 +52,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-foreground">{t.footer.followUs}</h3>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-secondary hover:bg-primary/20 border border-border hover:border-primary/50 rounded-lg flex items-center justify-center transition-all group"
-                    aria-label={social.label}
-                  >
-                    <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
         </div>
 
